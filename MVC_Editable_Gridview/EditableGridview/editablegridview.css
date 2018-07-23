@@ -1,0 +1,109 @@
+﻿.plus_ico{
+    width:15px;
+}
+.edit_ico{
+    width:20px;
+    margin-right:10px;
+    margin-top:-2px;
+}
+.save_ico{
+    width:15px;
+    margin-left:1px;
+    margin-right:15px;
+}
+.delete_ico{
+    width:15px;
+}
+.edit_ico:hover, .delete_ico:hover, .save_ico:hover, .plus_ico:hover{
+    cursor:pointer;
+    transform: scale(1.25);
+}
+.inp_txt{
+    width:150px;
+}
+.disp_lbl{
+    min-width:150px;
+    font-weight:normal;
+}
+
+
+
+.pagination{
+
+}
+.pagination li:hover{
+    cursor: pointer;
+    text-decoration:none;
+    background-color:#B2DFDB;
+}
+
+.page-num{
+    display:inline-block;
+    line-height:1.75em;
+    width:25px;
+    height:25px;
+    text-align:center;
+    cursor:pointer;
+    text-decoration:none;
+    color:black;
+    border-radius:100px;
+
+    /*Removes ability to highlight text in header*/
+     -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.page-num:hover{
+    display:inline-block;
+    cursor:pointer;
+    text-decoration:none;
+    background-color: lightgray;
+    color: black;
+}
+
+.selected-page, .selected-page:visited{
+    background-color:black;
+    color: white;
+    text-decoration:none;
+}
+
+.pagesize{	
+	margin-bottom:0px;
+}
+
+.sortable_header{
+    /*Removes ability to highlight text in header*/
+     -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+	cursor:pointer;
+}
+
+.selected_sortable_header{
+	border-bottom:solid 2px black !important;
+}
+
+.editable_gridview{
+    border:solid 2px black;
+    border-radius:25px;
+    width:600px;
+    
+}
+.editable_table{
+     margin:0 auto;
+}
+.editable_table th, .editable_table td{
+    border:solid 1px lightgray;
+    padding-left:5px;
+    padding-right:5px;
+}
+

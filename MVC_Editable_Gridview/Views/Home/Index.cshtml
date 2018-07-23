@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/EditableGridview/editablegridview.css" rel="stylesheet" />
+<h2>Editable MVC Gridview</h2>
+<br />
+<br />
+<label>List:</label>
+<select id="ddlList">
+    <option value="DotaObjects">DotaObjects</option>
+</select>
+
+<br />
+<br />
+<div class="editable_gridview">
+    <br />
+    <table id="tblMain" class="editable_table">
+        <thead>
+            <tr>
+                <th class="sortable_header" onclick="sortTable(0, 'STR');">Hero</th>
+                <th class="sortable_header" onclick="sortTable(1, 'STR');">Type</th>
+                <th class="sortable_header" onclick="sortTable(2, 'STR');">Faction</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tblMain_body"></tbody>
+    </table>
+    <div class='pagination-container'>
+        <table id='pagination-table' style="margin: 0 auto;">
+            <tr>
+                <td>
+                    <span class="pagination" id='paginator'>
+                        <!--	Here the JS Function Will Add the Rows -->
+                    </span>
+                </td>
+                <td style="padding-left:25px;">
+                    <select class="pagesize" name="state" id="pagesize_ddl">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/EditableGridview/EditableGridview.js"></script>
+<script>
+    $(function () {
+        var params = {
+            Load: "/Home/Load",
+            Add: "/Home/Add",
+            Update: "/Home/Update",
+            Delete: "/Home/Delete",
+            ListSelector: "#ddlList",
+            TableId: "#tblMain",
+            PaginatorId: "#paginator",
+            PageSizeDDLId: "#pagesize_ddl"
+        };
+        initializeEditableGridview(params);
+    });
+</script>
+
